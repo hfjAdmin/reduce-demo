@@ -1,8 +1,30 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+
+import { DebounceComponent } from './page/debounce/debounce.component';
+import { ThrottleComponent } from './page/throttle/throttle.component';
+import { HeaderNavListComponent } from './layout/header-nav-list/header-nav-list.component';
+import { HeaderListComponent } from './layout/header-list/header-list.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [{
+  path: '',
+  component: HeaderNavListComponent,
+  children: [
+    {
+      path: 'header-list',
+      component: HeaderListComponent},
+      {
+          path: 'debounce-page',
+          component: DebounceComponent
+        },
+        {
+          path: 'throttle-page',
+          component: ThrottleComponent
+        }
+    ]
+}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
