@@ -9,6 +9,13 @@ import { HeaderNavListComponent } from './layout/header-nav-list/header-nav-list
 import { HeaderListComponent } from './layout/header-list/header-list.component';
 import { NavListComponent } from './layout/nav-list/nav-list.component';
 import { FormsModule } from '@angular/forms';
+import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
+
+registerLocaleData(zh);
 
 @NgModule({
   declarations: [
@@ -17,15 +24,11 @@ import { FormsModule } from '@angular/forms';
     HeaderListComponent,
     ThrottleComponent,
     NavListComponent,
-    HeaderNavListComponent,
+    HeaderNavListComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, NgZorroAntdModule, HttpClientModule, BrowserAnimationsModule],
 
-  providers: [],
+  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
