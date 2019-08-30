@@ -1,11 +1,9 @@
-<!-- [(ngModel)]="inputValue" -->
-<!-- <input type="text" name="input" class="input" id="input" (keyup)="keyup()"> -->
-<h2>原生js防抖</h2>
+<h2>RxJs防抖</h2>
 
 <div class="box">
     <div class="box-left">
         <p>处理前(Before)</p>
-        <input nz-input placeholder="请输入" (keyup)="keyupBefore()" name="input" class="input-left" />
+        <input nz-input placeholder="请输入" (keyup)="keyupBefore()" name="input" class="input-left" id='zsss' [(ngModel)]="inputValue" />
         <ul class="ul-list-left"></ul>
     </div>
     <div class="box-right">

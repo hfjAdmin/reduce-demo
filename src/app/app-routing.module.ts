@@ -5,6 +5,7 @@ import { DebounceComponent } from './page/debounce/debounce.component';
 import { ThrottleComponent } from './page/throttle/throttle.component';
 import { HeaderNavListComponent } from './layout/header-nav-list/header-nav-list.component';
 import { HeaderListComponent } from './layout/header-list/header-list.component';
+import { RxjsDebounceComponent } from './page/rxjs-debounce/rxjs-debounce.component';
 
 
 const routes: Routes = [{
@@ -13,10 +14,15 @@ const routes: Routes = [{
   children: [
     {
       path: 'header-list',
-      component: HeaderListComponent},
+      component: HeaderListComponent,
+    },
       {
           path: 'debounce-page',
           component: DebounceComponent
+        },
+        {
+          path: 'rxjs-debounce-page',
+          component: RxjsDebounceComponent
         },
         {
           path: 'throttle-page',

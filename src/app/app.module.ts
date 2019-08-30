@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { RxjsDebounceComponent } from './page/rxjs-debounce/rxjs-debounce.component';
 
 registerLocaleData(zh);
 
@@ -24,7 +25,8 @@ registerLocaleData(zh);
     HeaderListComponent,
     ThrottleComponent,
     NavListComponent,
-    HeaderNavListComponent
+    HeaderNavListComponent,
+    RxjsDebounceComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgZorroAntdModule, HttpClientModule, BrowserAnimationsModule],
 
